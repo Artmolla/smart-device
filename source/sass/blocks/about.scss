@@ -1,6 +1,4 @@
 .about {
-  padding: 0 0 0 10%;
-
   h2 {
     font-style: normal;
     font-weight: 400;
@@ -20,19 +18,19 @@
 }
 
 .about__content {
-  // position: relative;
-  // max-width: 984px;
-  // margin: 0 0 0 calc(50% - 501px);
-  // background-image: url("../../img/year.png");
-  // background-repeat: no-repeat;
-  // background-position: left -200px top 0;
-
-  // padding: 0 calc(50% - 487px) 0 calc(50% - 501px);
-  padding: 0 calc(50% - 487px) 0 209px;
+  padding: 0 10% 0 21.5%;
 
   background-image: url("../../img/year.png");
   background-repeat: no-repeat;
-  background-position: left 31px top 3px;
+  background-position: left 9.7% top 3px;
+
+  @media (max-width: 1432px) {
+    background-position: left 8.7% top 3px;
+  }
+
+  @media (min-resolution: 1.5dppx) {
+    background-image: url("../../img/year@2x.png");
+  }
 }
 
 .about__button {
