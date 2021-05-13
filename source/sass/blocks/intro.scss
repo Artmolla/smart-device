@@ -68,12 +68,12 @@
 
 .intro__image {
   position: absolute;
-  top: 35.5%;
+  top: 258px;
   right: 177px;
   z-index: 0;
 
   @media (max-width: $tablet-width) {
-    top: 15.5%;
+    top: 113px;
     right: -2px;
   }
 
@@ -92,7 +92,7 @@
   width: 407px;
   padding: 17px 0 19px 0;
   margin: 0 0 93px 97px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 19px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
