@@ -13,3 +13,11 @@
     padding: 0 14px;
   }
 }
+
+.container--inner {
+  max-width: 1170px;
+
+  @media (max-width: $tablet-width) {
+    max-width: 718px;
+  }
+}
