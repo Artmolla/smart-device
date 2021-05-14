@@ -2,11 +2,11 @@
   padding: 112px calc(50% - 605px) 76px;
 
   @media (max-width: $tablet-width) {
-    padding: 54px calc(50% - 605px) 116px;
+    padding: 54px calc(50% - 605px) 28px;
   }
 
   @media (max-width: $mobile-width) {
-    padding: 37px calc(50% - 605px) 116px;
+    padding: 37px calc(50% - 605px) 33px;
   }
 }
 
