@@ -142,10 +142,17 @@
             <a href="#">
               <p>Производство печатных плат</p>
               <picture>
-                <source type="image/webp"
-                  srcset="img/products/production@2x.webp 1x, img/products/production@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/products/production-mobile.webp 1x, img/products/production-mobile@2x.webp 2x">
+                <source media="(max-width: 767px)"
+                  srcset="img/products/production-mobile.png 1x, img/products/production-mobile@2x.png 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/products/production-tablet.webp 1x, img/products/production-tablet@2x.webp 2x">
+                <source media="(max-width: 1023px)"
+                  srcset="img/products/production-tablet.png 1x, img/products/production-tablet@2x.png 2x">
+                <source type="image/webp" srcset="img/products/production.webp 1x, img/products/production@2x.webp 2x">
                 <!-- 1x: 370px, 2x: 740px -->
-                <img src="img/products/production.jpg" srcset="img/products/production@2x.jpeg 2x" width="370"
+                <img src="img/products/production.png" srcset="img/products/production@2x.png 2x" width="370"
                   height="620" alt="Производство печатных плат" loading="lazy">
               </picture>
             </a>
@@ -154,10 +161,18 @@
             <a href="#">
               <p>Монтаж печатных плат</p>
               <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/products/installation-mobile.webp 1x, img/products/installation-mobile@2x.webp 2x">
+                <source media="(max-width: 767px)"
+                  srcset="img/products/installation-mobile.png 1x, img/products/installation-mobile@2x.png 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/products/installation-tablet.webp 1x, img/products/installation-tablet@2x.webp 2x">
+                <source media="(max-width: 1023px)"
+                  srcset="img/products/installation-tablet.png 1x, img/products/installation-tablet@2x.png 2x">
                 <source type="image/webp"
-                  srcset="img/products/installation@2x.webp 1x, img/products/installation@2x.webp 2x">
+                  srcset="img/products/installation.webp 1x, img/products/installation@2x.webp 2x">
                 <!-- 1x: 370px, 2x: 740px -->
-                <img src="img/products/installation.jpg" srcset="img/products/installation@2x.jpeg 2x" width="370"
+                <img src="img/products/installation.png" srcset="img/products/installation@2x.png 2x" width="370"
                   height="620" alt="Монтаж печатных плат" loading="lazy">
               </picture>
             </a>
@@ -166,15 +181,48 @@
             <a href="#">
               <p>Комплектующие для светотехники</p>
               <picture>
-                <source type="image/webp"
-                  srcset="img/products/components@2x.webp 1x, img/products/components@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/products/components-mobile.webp 1x, img/products/components-mobile@2x.webp 2x">
+                <source media="(max-width: 767px)"
+                  srcset="img/products/components-mobile.png 1x, img/products/components-mobile@2x.png 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/products/components-tablet.webp 1x, img/products/components-tablet@2x.webp 2x">
+                <source media="(max-width: 1023px)"
+                  srcset="img/products/components-tablet.png 1x, img/products/components-tablet@2x.png 2x">
+                <source type="image/webp" srcset="img/products/components.webp 1x, img/products/components@2x.webp 2x">
                 <!-- 1x: 370px, 2x: 740px -->
-                <img src="img/products/components.jpg" srcset="img/products/components@2x.jpeg 2x" width="370"
+                <img src="img/products/components.png" srcset="img/products/components@2x.png 2x" width="370"
                   height="620" alt="Комплектующие для светотехники" loading="lazy">
               </picture>
             </a>
           </li>
         </ul>
+      </div>
+    </section>
+    <section class="callback">
+      <div class="container">
+        <h2>Остались вопросы? Задайте их нам!</h2>
+        <p>проконсультируем</p>
+        <div class="callback-form">
+          <form action="">
+            <div class="callback-form__input-container">
+              <label for="name">Имя</label>
+              <input id="name" type="text" name="name" placeholder="Имя" required>
+            </div>
+            <div class="callback-form__input-container">
+              <label for="phone">Имя</label>
+              <input id="phone" type="tel" name="phone" placeholder="Телефон" required>
+            </div>
+            <div class="callback-form__input-container">
+              <label for="question">Ваш вопрос</label>
+              <textarea name="question" id="question-field" cols="30" rows="10">
+                Ваш вопрос
+              </textarea>
+            </div>
+            <button type="submit">Задать вопрос</button>
+
+          </form>
+        </div>
       </div>
     </section>
   </main>
