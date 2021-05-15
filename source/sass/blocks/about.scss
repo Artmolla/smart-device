@@ -62,6 +62,11 @@
   background-repeat: no-repeat;
   background-position: left 9.77% top 2px;
 
+  @media (min-resolution: 1.5dppx) {
+    background-image: url("../../img/year@2x.png");
+    background-size: 116px 317px;
+  }
+
   @media (max-width: 1432px) {
     background-position: left 8.7% top 3px;
   }
@@ -75,10 +80,6 @@
   @media (max-width: $mobile-width) {
     padding: 0;
     background-image: none;
-  }
-
-  @media (min-resolution: 1.5dppx) {
-    background-image: url("../../img/year@2x.png");
   }
 }
 
