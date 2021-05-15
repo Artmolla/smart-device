@@ -21,11 +21,27 @@
   }
 
   p {
+    position: relative;
     font-family: $secondary-font;
     font-size: 22px;
     line-height: 34px;
     padding: 0 0 0 97px;
     margin-bottom: 44px;
+
+    &::before {
+      position: absolute;
+      left: 3px;
+      top: 17px;
+      content: "";
+      width: 66px;
+      height: 2px;
+      background-color: $white;
+
+      @media (max-width: $tablet-width) {
+        width: 33px;
+        top: 16px;
+      }
+    }
 
     @media (max-width: $tablet-width) {
       font-size: 18px;
@@ -73,11 +89,13 @@
   z-index: 0;
 
   @media (max-width: $tablet-width) {
+    width: 465px;
     top: 113px;
-    right: -2px;
+    right: -207px;
   }
 
   @media (max-width: $mobile-width) {
+    width: 294px;
     top: 92px;
     right: 0;
   }
