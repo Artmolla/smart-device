@@ -199,7 +199,7 @@
         </ul>
       </div>
     </section>
-    <section class="callback">
+    <section class="callback" id="callback">
       <div class="container container--inner">
         <div class="callback__content">
           <h2>Остались вопросы? Задайте их нам!</h2>
@@ -210,14 +210,13 @@
                 <label class="visually-hidden" for="name">Имя</label>
                 <input id="name" type="text" name="name" placeholder="Имя"
                   pattern="[A-Za-zА-Яа-яЁё]+(\s+[A-Za-zА-Яа-яЁё]+)?" required>
-
                 <label class="visually-hidden" for="phone">Имя</label>
                 <input id="phone" type="tel" name="phone" placeholder="Телефон" pattern="^((\+7|7|8)+([0-9]){10})$"
                   required>
               </div>
               <div class="callback-form__input-container">
                 <label class="visually-hidden" for="question">Ваш вопрос</label>
-                <textarea name="question" id="question" cols="30" rows="7">Ваш вопрос</textarea>
+                <textarea name="question" id="question" cols="30">Ваш вопрос</textarea>
               </div>
               <div class="callback-form__input-container callback-form__input-container--agreement">
                 <button class="callback-form__button" type="submit">Задать вопрос</button>
@@ -230,7 +229,83 @@
       </div>
     </section>
   </main>
-  <footer class="footer"></footer>
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__item">
+        <a>
+          <svg width="216" height="52">
+            <use xlink:href="img/sprite.svg#logo-footer"></use>
+          </svg>
+        </a>
+        <span>1999-2018 SD Service Devices</span>
+        <ul class="social-list">
+          <li class="social-list__item">
+            <a href="#">
+              <svg width="27" height="27">
+                <use xlink:href="img/sprite.svg#icon-fb"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a href="#">
+              <svg width="27" height="26">
+                <use xlink:href="img/sprite.svg#icon-ok"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a href="#">
+              <svg width="27" height="26">
+                <use xlink:href="img/sprite.svg#icon-vk"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <section class="sections footer__item">
+        <h2 class="visually-hidden">Навигация по разделам сайта</h2>
+        <button class="footer__button" type="button">Разделы сайта</button>
+        <ul class="sections__list">
+          <li class="sections__item">
+            <a href="#">О компании</a>
+          </li>
+          <li class="sections__item">
+            <a href="#">Продукты</a>
+          </li>
+          <li class="sections__item">
+            <a href="#">Производство печатных плат</a>
+          </li>
+          <li class="sections__item">
+            <a href="#">Монтаж печатных плат</a>
+          </li>
+          <li class="sections__item">
+            <a href="#">Комплектующие</a>
+          </li>
+          <li class="sections__item">
+            <a href="#">Доставка</a>
+          </li>
+          <li class="sections__item">
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+      </section>
+      <address class="footer__item">
+        <button class="footer__button" type="button">Наш офис</button>
+        <p>г. Мытищи, Олимпийский проспект, д.10</p>
+        <a href="tel:+74955894050">+7 (495) 589-40-50</a>
+        <a href="tel:+79250038767">+7 (925) 003-87-67</a>
+        <a href="tel:+792692608079">+7 (926) 926-080-79</a>
+      </address>
+    </div>
+    <section class="copyright">
+      <div class="container copyright__container">
+        <h2 class="visually-hidden">Политика конфиденциальности и защита персональных данных</h2>
+        <p>Все права защищены <span>1999-2018 SD Service Devices</span></p>
+        <a href="#">Условия конфиденциальности</a>
+        <a href="#">Developed by wow studio</a>
+      </div>
+    </section>
+  </footer>
 
   <script src="js/main.js"></script>
 
