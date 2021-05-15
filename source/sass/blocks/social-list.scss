@@ -1,0 +1,15 @@
+.social-list {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 45px;
+}
+
+.social-list__item {
+  margin-right: 16px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
