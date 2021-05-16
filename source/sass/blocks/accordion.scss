@@ -1,0 +1,38 @@
+.accordion__item .accordion__body {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.accordion__item--open .accordion__body {
+  @media (max-width: $mobile-width) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+
+.accordion__button {
+  position: relative;
+
+  &::after {
+    @media (max-width: $mobile-width) {
+      position: absolute;
+      right: 0;
+      content: "";
+      width: 16px;
+      height: 16px;
+      background-image: url("../../img/icons/icon-plus.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+
+.accordion__item--open .accordion__button {
+  &::after {
+    @media (max-width: $mobile-width) {
+      background-image: url("../../img/icons/icon-minus.svg");
+    }
+  }
+}
