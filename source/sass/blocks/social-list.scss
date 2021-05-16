@@ -4,6 +4,10 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 45px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 0;
+  }
 }
 
 .social-list__item {

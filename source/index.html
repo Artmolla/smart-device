@@ -231,7 +231,7 @@
   </main>
   <footer class="footer">
     <div class="container footer__container">
-      <div class="footer__item">
+      <div class="footer__item footer__item--social">
         <a>
           <svg width="216" height="52">
             <use xlink:href="img/sprite.svg#logo-footer"></use>
@@ -262,10 +262,10 @@
           </li>
         </ul>
       </div>
-      <section class="sections footer__item">
+      <section class="sections footer__item accordion">
         <h2 class="visually-hidden">Навигация по разделам сайта</h2>
-        <button class="footer__button" type="button">Разделы сайта</button>
-        <ul class="sections__list">
+        <button class="footer__button accordion__button" type="button">Разделы сайта</button>
+        <ul class="sections__list accordion__item">
           <li class="sections__item">
             <a href="#">О компании</a>
           </li>
@@ -289,13 +289,16 @@
           </li>
         </ul>
       </section>
-      <address class="footer__item">
-        <button class="footer__button" type="button">Наш офис</button>
-        <p>г. Мытищи, Олимпийский проспект, д.10</p>
-        <a href="tel:+74955894050">+7 (495) 589-40-50</a>
-        <a href="tel:+79250038767">+7 (925) 003-87-67</a>
-        <a href="tel:+792692608079">+7 (926) 926-080-79</a>
-      </address>
+      <section class="footer__item footer__item--contacts accordion">
+        <h2 class="visually-hidden">Наш адрес и телефоны</h2>
+        <button class="footer__button accordion__button accordion__button--open" type="button">Наш офис</button>
+        <address class="footer__address accordion__item accordion__item--open">
+          <p>г. Мытищи, Олимпийский проспект, д.10</p>
+          <a href="tel:+74955894050">+7 (495) 589-40-50</a>
+          <a href="tel:+79250038767">+7 (925) 003-87-67</a>
+          <a href="tel:+792692608079">+7 (926) 926-080-79</a>
+        </address>
+      </section>
     </div>
     <section class="copyright">
       <div class="container copyright__container">
