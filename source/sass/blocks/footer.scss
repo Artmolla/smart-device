@@ -3,7 +3,6 @@
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
-  line-height: 25px;
   color: $dark-blue-opacity;
   background-color: $snow;
 
@@ -17,6 +16,7 @@
   grid-template-columns: 1fr 40.2% 1fr;
   gap: 20px 6.1%;
   padding: 65px 20px 55px;
+  line-height: 25px;
 
   @media (max-width: 1460px) {
     gap: 20px 1%;
