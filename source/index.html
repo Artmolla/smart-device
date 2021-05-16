@@ -201,36 +201,34 @@
     </section>
     <section class="callback" id="callback">
       <div class="container container--inner">
-        <div class="callback__content">
+        <div class="callback-form">
           <h2>Остались вопросы? Задайте их нам!</h2>
           <p>Мы проконсультируем Вас бесплатно</p>
-          <div class="callback-form">
-            <form action="https://echo.htmlacademy.ru" method="POST">
-              <div class="callback-form__input-container">
-                <label class="visually-hidden" for="name">Имя</label>
-                <input id="name" type="text" name="name" placeholder="Имя"
-                  pattern="[A-Za-zА-Яа-яЁё]+(\s+[A-Za-zА-Яа-яЁё]+)?" required>
-                <label class="visually-hidden" for="phone">Имя</label>
-                <input id="phone" type="tel" name="phone" placeholder="Телефон" pattern="^((\+7|7|8)+([0-9]){10})$"
-                  required>
-              </div>
-              <div class="callback-form__input-container">
-                <label class="visually-hidden" for="question">Ваш вопрос</label>
-                <textarea name="question" id="question" cols="30">Ваш вопрос</textarea>
-              </div>
-              <div class="callback-form__input-container callback-form__input-container--agreement">
-                <button class="callback-form__button" type="submit">Задать вопрос</button>
-                <input class="visually-hidden" id="agreed" type="checkbox" name="agreed" checked required>
-                <label for="agreed">Я согласен на обработку персональных данных</label>
-              </div>
-            </form>
-          </div>
+          <form action="https://echo.htmlacademy.ru" method="POST">
+            <div class="callback-form__input-container">
+              <label class="visually-hidden" for="name">Имя</label>
+              <input id="name" type="text" name="name" placeholder="Имя"
+                pattern="[A-Za-zА-Яа-яЁё]+(\s+[A-Za-zА-Яа-яЁё]+)?" required>
+              <label class="visually-hidden" for="phone">Имя</label>
+              <input id="phone" type="tel" name="phone" placeholder="Телефон" pattern="^((\+7|7|8)+([0-9]){10})$"
+                required>
+            </div>
+            <div class="callback-form__input-container">
+              <label class="visually-hidden" for="question">Ваш вопрос</label>
+              <textarea name="question" id="question" cols="30">Ваш вопрос</textarea>
+            </div>
+            <div class="callback-form__input-container callback-form__input-container--agreement">
+              <button class="callback-form__button" type="submit">Задать вопрос</button>
+              <input class="visually-hidden" id="agreed" type="checkbox" name="agreed" checked required>
+              <label for="agreed">Я согласен на обработку персональных данных</label>
+            </div>
+          </form>
         </div>
       </div>
     </section>
   </main>
   <footer class="footer">
-    <div class="container footer__container">
+    <div class="container footer__container accordion">
       <div class="footer__item footer__item--social">
         <a>
           <svg width="216" height="52">
@@ -262,10 +260,10 @@
           </li>
         </ul>
       </div>
-      <section class="sections footer__item accordion">
+      <section class="sections footer__item accordion__item">
         <h2 class="visually-hidden">Навигация по разделам сайта</h2>
         <button class="footer__button accordion__button" type="button">Разделы сайта</button>
-        <ul class="sections__list accordion__item">
+        <ul class="sections__list accordion__body">
           <li class="sections__item">
             <a href="#">О компании</a>
           </li>
@@ -289,10 +287,10 @@
           </li>
         </ul>
       </section>
-      <section class="footer__item footer__item--contacts accordion">
+      <section class="footer__item footer__item--contacts accordion__item">
         <h2 class="visually-hidden">Наш адрес и телефоны</h2>
         <button class="footer__button accordion__button accordion__button--open" type="button">Наш офис</button>
-        <address class="footer__address accordion__item accordion__item--open">
+        <address class="footer__address accordion__body">
           <p>г. Мытищи, Олимпийский проспект, д.10</p>
           <a href="tel:+74955894050">+7 (495) 589-40-50</a>
           <a href="tel:+79250038767">+7 (925) 003-87-67</a>
@@ -309,6 +307,37 @@
       </div>
     </section>
   </footer>
+  <div class="modal">
+    <div class="modal__content">
+      <button class="modal__close-modal-button" type="button">
+        <span class="visually-hidden">Закрыть модальное окно</span>
+      </button>
+      <div class="callback-form callback-form--modal">
+        <h2>Закажите звонок</h2>
+        <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+        <form action="https://echo.htmlacademy.ru" method="POST">
+          <div class="callback-form__input-container callback-form__input-container--modal">
+            <label class="visually-hidden" for="modal-name">Имя</label>
+            <input id="modal-name" type="text" name="name" placeholder="Имя"
+              pattern="[A-Za-zА-Яа-яЁё]+(\s+[A-Za-zА-Яа-яЁё]+)?" required>
+            <label class="visually-hidden" for="modal-phone">Имя</label>
+            <input id="modal-phone" type="tel" name="phone" placeholder="Телефон" pattern="^((\+7|7|8)+([0-9]){10})$"
+              required>
+          </div>
+          <div class="callback-form__input-container callback-form__input-container--modal">
+            <label class="visually-hidden" for="modal-question">Ваш вопрос</label>
+            <textarea name="question" id="modal-question" cols="30">Ваш вопрос</textarea>
+          </div>
+          <div
+            class="callback-form__input-container callback-form__input-container--agreement callback-form__input-container--modal">
+            <button class="callback-form__button" type="submit">Отправить</button>
+            <input class="visually-hidden" id="modal-agreed" type="checkbox" name="agreed" checked required>
+            <label for="modal-agreed">Я согласен на обработку персональных данных</label>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 

@@ -1,17 +1,59 @@
 .callback-form {
-  padding: 33px 0 33px 4px;
+  max-width: 574px;
+  margin-left: auto;
+  padding: 0 0 33px 4px;
+  color: $white;
+
+  h2 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 51px;
+    margin-bottom: 0;
+
+    @media (max-width: $tablet-width) {
+      font-size: 32px;
+      line-height: 45px;
+    }
+
+    @media (max-width: $mobile-width) {
+      margin-top: 13px;
+      font-size: 28px;
+      line-height: 39px;
+    }
+  }
+
+  p {
+    font-family: $secondary-font;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 0 0 0 4px;
+    margin-top: 9px;
+
+    @media (max-width: $tablet-width) {
+      margin-top: 16px;
+    }
+
+    @media (max-width: $mobile-width) {
+      margin-top: 14px;
+      padding: 0 0 0 1px;
+    }
+  }
 
   form {
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 40px;
+    padding: 34px 0 0 4px;
 
     @media (max-width: $tablet-width) {
       row-gap: 42px;
+      padding: 38px 0 0 4px;
     }
 
     @media (max-width: $mobile-width) {
       row-gap: 32px;
+      padding: 10px 0 0 0;
     }
   }
 
@@ -60,11 +102,13 @@
   }
 
   @media (max-width: $tablet-width) {
-    padding: 38px 0 33px 4px;
+    max-width: 590px;
+    margin: 0 auto;
+    padding: 0 0 33px 0;
   }
 
   @media (max-width: $mobile-width) {
-    padding: 10px 0 33px 4px;
+    padding: 10px 0 33px 0;
   }
 }
 
@@ -80,7 +124,7 @@
   border: 1px solid $white;
   border-radius: 5px;
   padding: 13px 18px 14px 18px;
-  margin-top: 3px;
+  margin-top: 1px;
   color: $white;
   background-color: transparent;
 
@@ -107,14 +151,14 @@
 .callback-form__input-container--agreement {
   label {
     position: relative;
-    padding: 10px 0 0 40px;
+    padding: 8px 0 0 40px;
     font-family: $secondary-font;
     font-size: 14px;
     line-height: 16px;
 
     &::before {
       position: absolute;
-      top: 12px;
+      top: 10px;
       left: 8px;
       content: "";
       width: 16px;
@@ -123,13 +167,55 @@
       outline-offset: -1px;
 
       @media (max-width: $mobile-width) {
-        top: 0;
-        left: -2px;
+        top: 2px;
+        left: 2px;
       }
     }
 
     @media (max-width: $mobile-width) {
-      padding: 0 0 0 31px;
+      padding: 0 0 0 34px;
+    }
+  }
+}
+
+.callback-form--modal {
+  padding: 6px 0 38px 0;
+
+  h2 {
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  p {
+    padding: 0 10px 0 0;
+    margin: 13px 0 0 0;
+  }
+
+  form {
+    padding: 34px 0 0 0;
+    row-gap: 31px;
+  }
+
+  input {
+    padding: 14px 23px;
+  }
+
+  textarea {
+    min-height: 76px;
+    padding: 14px 23px;
+  }
+}
+
+.callback-form__input-container--modal {
+  grid-template-columns: 1fr;
+  gap: 30px;
+
+  label {
+    padding: 2px 8px 0 47px;
+
+    &::before {
+      top: 4px;
+      left: -1px;
     }
   }
 }

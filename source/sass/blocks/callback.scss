@@ -1,6 +1,5 @@
 .callback {
-  padding: 62px 0 79px 0;
-  color: $white;
+  padding: 62px 0 80px 0;
   background-color: $blue;
   background-image:
     url("../../img/backgrounds/bg-airplane.png"),
@@ -11,41 +10,6 @@
     top 161px left calc(43% - 256px),
     top -60px left calc(33% - 237px),
     top 35px right;
-
-  h2 {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 51px;
-    margin-bottom: 0;
-
-    @media (max-width: $tablet-width) {
-      font-size: 32px;
-      line-height: 45px;
-    }
-
-    @media (max-width: $mobile-width) {
-      font-size: 28px;
-      line-height: 39px;
-    }
-  }
-
-  p {
-    font-family: $secondary-font;
-    font-size: 16px;
-    line-height: 22px;
-    padding: 0 0 0 4px;
-    margin-top: 9px;
-
-    @media (max-width: $tablet-width) {
-      margin-top: 16px;
-    }
-
-    @media (max-width: $mobile-width) {
-      margin-top: 14px;
-      padding: 0 0 0 1px;
-    }
-  }
 
   @media (min-resolution: 1.5dppx) {
     background-image:
@@ -66,15 +30,5 @@
 
   @media (max-width: $mobile-width) {
     padding: 6px 0 10px 0;
-  }
-}
-
-.callback__content {
-  max-width: 574px;
-  margin-left: auto;
-
-  @media (max-width: $tablet-width) {
-    max-width: 590px;
-    margin: 0 auto;
   }
 }
