@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  var mediaQuery = window.matchMedia('(max-width: 768px)');
+  var mediaQuery = window.matchMedia('(max-width: 767px)');
 
   if (mediaQuery.matches) {
     var accordionContent = document.querySelector('.accordion');
