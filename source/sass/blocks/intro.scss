@@ -118,6 +118,8 @@
   background-color: $blue;
 
   span {
+    pointer-events: none;
+
     &:first-child {
       @media (max-width: $mobile-width) {
         display: none;
