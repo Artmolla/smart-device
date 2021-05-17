@@ -24,7 +24,7 @@
     margin-right: 28.6%;
 
     &:last-child {
-      margin-right: 0;
+      margin: 0;
     }
 
     @media (max-width: 1460px) {
@@ -32,7 +32,7 @@
     }
 
     @media (max-width: $mobile-width) {
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
   }
 }
@@ -49,11 +49,12 @@
   }
 
   @media (max-width: $tablet-width) {
-    padding: 21px 0 24px 0;
+    padding: 26px 0 24px 0;
   }
 
   @media (max-width: $mobile-width) {
+    flex-direction: column;
     justify-content: center;
-    padding: 27px 0 24px 0;
+    padding: 32px 0 24px 0;
   }
 }

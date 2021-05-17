@@ -1,5 +1,5 @@
 .about {
-  padding: 0 0 100px 0;
+  padding: 0 0 99px 0;
 
   h2 {
     font-style: normal;
@@ -58,12 +58,12 @@
 .about__content {
   padding: 0 10% 11px 21.5%;
 
-  background-image: url("../../img/year.png");
+  background-image: url("../../img/backgrounds/bg-year.png");
   background-repeat: no-repeat;
-  background-position: left 9.77% top 2px;
+  background-position: left 9.77% top 3px;
 
   @media (min-resolution: 1.5dppx) {
-    background-image: url("../../img/year@2x.png");
+    background-image: url("../../img/backgrounds/bg-year@2x.png");
     background-size: 116px 317px;
   }
 
@@ -104,7 +104,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 13px 10px;
+  padding: 13px 10px 14px 10px;
   width: 158px;
   font-weight: 700;
   font-size: 14px;
