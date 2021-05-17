@@ -3662,7 +3662,7 @@
           @protected
         */
         value: function _saveSelection()
-	    /* ev */ {
+    /* ev */ {
           if (this.value !== this.el.value) {
             console.warn('Element value was changed outside of mask. Syncronize mask using `mask.updateValue()` to work properly.'); // eslint-disable-line no-console
           }
