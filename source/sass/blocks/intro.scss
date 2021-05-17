@@ -117,6 +117,22 @@
   border-radius: 5px;
   background-color: $blue;
 
+  span {
+    &:first-child {
+      @media (max-width: $mobile-width) {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      display: none;
+
+      @media (max-width: $mobile-width) {
+        display: inline;
+      }
+    }
+  }
+
   @media (max-width: $tablet-width) {
     width: 379px;
     margin: 0 0 93px 51px;
@@ -125,20 +141,6 @@
   @media (max-width: $mobile-width) {
     width: 287px;
     margin: 0;
-  }
-}
-
-.intro__button-text {
-  @media (max-width: $mobile-width) {
-    display: none;
-  }
-}
-
-.intro__button-text--mobile {
-  display: none;
-
-  @media (max-width: $mobile-width) {
-    display: inline;
   }
 }
 

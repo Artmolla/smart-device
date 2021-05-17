@@ -9,7 +9,7 @@
     var currentElement = element || null;
 
     accordionItems.forEach(function (it) {
-      if (!it.classList.contains('accordion__item') && currentElement !== it) {
+      if (it.classList.contains('accordion__item--open') && currentElement !== it) {
         it.classList.remove('accordion__item--open');
       }
     });
@@ -26,6 +26,7 @@
 
   var toggleAccordionClickHandler = function (evt) {
     evt.preventDefault();
+
     closeAllAccordion(evt.target.closest('.accordion__item'));
     evt.target.closest('.accordion__item').classList.toggle('accordion__item--open');
     evt.target.addEventListener('keydown', closeAccordionKeyPressHandler);
@@ -74,7 +75,7 @@
 
   var openModalClickHandler = function (evt) {
     evt.preventDefault();
-    // var modalName = evt.target.dataset.modal;
+
     var modal = document.querySelector('.modal');
     modal.classList.add('modal--open');
     var modalCloseButton = modal.querySelector('.modal__close-modal-button');
