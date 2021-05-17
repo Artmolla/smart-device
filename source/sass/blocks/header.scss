@@ -45,6 +45,14 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+
+    &:hover {
+      color: $light-blue;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   @media (max-width: $tablet-width) {
@@ -143,6 +151,16 @@
   padding: 12px 0;
   border: 1px solid $white;
   border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    color: $light-blue;
+    border-color: $light-blue;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (max-width: $tablet-width) {
     display: none;

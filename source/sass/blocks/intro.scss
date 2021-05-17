@@ -135,6 +135,15 @@
     }
   }
 
+  &:hover {
+    color: $light-blue;
+    background-color: $white;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (max-width: $tablet-width) {
     width: 379px;
     margin: 0 0 93px 51px;
@@ -154,6 +163,14 @@
   writing-mode: vertical-lr;
   transform: rotate(-180deg);
   opacity: 0.5;
+
+  &:hover {
+    color: $light-blue;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (max-width: $tablet-width) {
     display: none;

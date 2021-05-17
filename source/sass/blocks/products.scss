@@ -67,6 +67,7 @@
     min-height: 620px;
     box-sizing: border-box;
     padding: 30px 44px;
+    transition: all 0.3s ease;
 
     &::after {
       position: absolute;
@@ -79,6 +80,15 @@
       background-color: $blue;
       background-repeat: no-repeat;
       background-position: 54% 50%;
+    }
+
+    &:hover {
+      filter: drop-shadow(0 0 0 $light-grey);
+      transform: scale(1.01);
+    }
+
+    &:active {
+      opacity: 0.3;
     }
 
     @media (max-width: $tablet-width) {
