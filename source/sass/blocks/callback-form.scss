@@ -77,6 +77,14 @@
       background-repeat: no-repeat;
       background-position: center;
     }
+
+    &:hover {
+      outline: 1px solid $white;
+    }
+
+    &:active {
+      outline: 1px solid $white;
+    }
   }
 
   textarea {
@@ -88,6 +96,14 @@
     border: none;
     background-color: $light-blue;
     resize: none;
+
+    &:hover {
+      outline: 1px solid $white;
+    }
+
+    &:active {
+      outline: 1px solid $white;
+    }
 
     @media (max-width: $tablet-width) {
       width: 100%;
@@ -159,12 +175,18 @@
 }
 
 .callback-form__input-container--agreement {
-  input:hover + label {
-    opacity: 1;
-  }
+  input {
+    &:hover + label{
+      opacity: 1;
+    }
 
-  input:active + label {
-    opacity: 0.3;
+    &:active + label {
+      opacity: 0.3;
+    }
+
+    &:focus + label {
+      opacity: 1;
+    }
   }
 
   label {
