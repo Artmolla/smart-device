@@ -72,6 +72,14 @@
   if (document.querySelector('.header__button')) {
     var openModalButton = document.querySelector('.header__button');
 
+    var disablePage = function () {
+      document.querySelector('.page').classList.add('page--disabled');
+    };
+
+    var enablePage = function () {
+      document.querySelector('.page').classList.remove('page--disabled');
+    };
+
     var closeModal = function (modal, buttonClose) {
       modal.classList.remove('modal--open');
       buttonClose.removeEventListener('click', closeModalClickHandler);
@@ -82,22 +90,26 @@
     var closeModalKeyPressHandler = function (evt) {
       var isEscKey = evt.key === 'Escape' || evt.key === 'Esc';
 
-      if (isEscKey) {
+      if (isEscKey && document.querySelector('.modal--open')) {
         document.querySelector('.modal--open').classList.remove('modal--open');
+        enablePage();
       }
     };
 
     var closeModalOutsideClickHandler = function (evt) {
       if (evt.target.classList.contains('modal')) {
         document.querySelector('.modal--open').classList.remove('modal--open');
+        enablePage();
       }
     };
 
     var closeModalClickHandler = function (evt) {
       evt.preventDefault();
+
       var modal = evt.target.closest('.modal--open');
       var buttonClose = evt.target;
       closeModal(modal, buttonClose);
+      enablePage();
     };
 
     var openModalClickHandler = function (evt) {
@@ -105,6 +117,7 @@
 
       var modal = document.querySelector('.modal');
       modal.classList.add('modal--open');
+      disablePage();
       var userNameField = modal.querySelector('input[name="name"]');
       var modalCloseButton = modal.querySelector('.modal__close-modal-button');
 
