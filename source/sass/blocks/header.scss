@@ -151,27 +151,32 @@
 }
 
 .header__button {
-  @include button-reset;
+  a {
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 0;
+    border: 1px solid $white;
+    border-radius: 5px;
+    cursor: pointer;
 
-  width: 180px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 12px 0;
-  border: 1px solid $white;
-  border-radius: 5px;
-  cursor: pointer;
+    &:hover {
+      color: $light-blue;
+      border-color: $light-blue;
+    }
 
-  &:hover {
-    color: $light-blue;
-    border-color: $light-blue;
-  }
+    &:active {
+      opacity: 0.3;
+    }
 
-  &:active {
-    opacity: 0.3;
-  }
-
-  @media (max-width: $tablet-width) {
-    display: none;
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
   }
 }

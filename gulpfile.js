@@ -68,7 +68,10 @@ gulp.task('webp', function () {
 });
 
 gulp.task('sprite', function () {
-  return gulp.src('source/img/**/*.svg')
+  return gulp.src([
+    'source/img/**/*.svg',
+    '!source/img/backgrounds/**/*',
+  ])
     .pipe(svgstore({ inlineSvg: true }))
     .pipe(rename('sprite.svg'))
     .pipe(gulp.dest('build/img'));

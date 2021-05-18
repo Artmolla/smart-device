@@ -1,3 +1,19 @@
+.accordion__item {
+  position: relative;
+
+  &::before {
+    @media (max-width: $mobile-width) {
+      position: absolute;
+      top: -30px;
+      left: -15px;
+      content: '';
+      width: 100vw;
+      height: 1px;
+      background-color: $grey-border-opacity;
+    }
+  }
+}
+
 .accordion__item .accordion__body {
   @media (max-width: $mobile-width) {
     display: none;
