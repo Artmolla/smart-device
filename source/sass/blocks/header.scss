@@ -86,7 +86,7 @@
   align-items: center;
   align-self: center;
   max-width: 75%;
-  margin: 0 6px 0 auto;
+  margin: 0 5px 0 auto;
 
   @media (max-width: $tablet-width) {
     margin: 0 0 0 auto;
@@ -154,6 +154,9 @@
   @include button-reset;
 
   width: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 12px 0;
   border: 1px solid $white;
   border-radius: 5px;
