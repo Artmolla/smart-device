@@ -69,7 +69,7 @@
     background-color: $light-blue;
 
     &::placeholder {
-      color: $white;
+      color: $white-opacity;
     }
 
     &:checked + label::before {
@@ -89,6 +89,7 @@
 
   textarea {
     font-family: $secondary-font;
+    font-size: 16px;
     grid-column: 1/3;
     min-height: 127px;
     padding: 14px 16px;
@@ -96,6 +97,10 @@
     border: none;
     background-color: $light-blue;
     resize: none;
+
+    &::placeholder {
+      color: $white-opacity;
+    }
 
     &:hover {
       outline: 1px solid $white;
