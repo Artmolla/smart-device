@@ -1,113 +1,121 @@
 'use strict';
 
 (function () {
-  var mediaQuery = window.matchMedia('(max-width: 767px)');
+  if (document.querySelector('.accordion')) {
+    var mediaQuery = window.matchMedia('(max-width: 767px)');
 
-  if (mediaQuery.matches) {
-    var accordionContent = document.querySelector('.accordion');
-    var accordionItems = Array.from(accordionContent.querySelectorAll('.accordion__item'));
-    var accordionButtons = Array.from(accordionContent.querySelectorAll('.accordion__button'));
+    if (mediaQuery.matches) {
+      var accordionContent = document.querySelector('.accordion');
+      var accordionItems = Array.from(accordionContent.querySelectorAll('.accordion__item'));
+      var accordionButtons = Array.from(accordionContent.querySelectorAll('.accordion__button'));
 
-    var closeAllAccordion = function (element) {
-      var currentElement = element || null;
+      var closeAllAccordion = function (element) {
+        var currentElement = element || null;
 
-      accordionItems.forEach(function (it) {
-        if (it.classList.contains('accordion__item--open') && currentElement !== it) {
-          it.classList.remove('accordion__item--open');
+        accordionItems.forEach(function (it) {
+          if (it.classList.contains('accordion__item--open') && currentElement !== it) {
+            it.classList.remove('accordion__item--open');
+          }
+        });
+      };
+
+      var closeAccordionKeyPressHandler = function (evt) {
+        var isEscKey = evt.key === 'Escape' || evt.key === 'Esc';
+
+        if (isEscKey) {
+          evt.target.closest('.accordion__item').classList.remove('accordion__item--open');
+          evt.target.removeEventListener('keydown', closeAccordionKeyPressHandler);
         }
+      };
+
+      var toggleAccordionClickHandler = function (evt) {
+        evt.preventDefault();
+
+        closeAllAccordion(evt.target.closest('.accordion__item'));
+        evt.target.closest('.accordion__item').classList.toggle('accordion__item--open');
+        evt.target.addEventListener('keydown', closeAccordionKeyPressHandler);
+      };
+
+      accordionButtons.forEach(function (it) {
+        it.addEventListener('click', toggleAccordionClickHandler);
       });
-    };
 
-    var closeAccordionKeyPressHandler = function (evt) {
-      var isEscKey = evt.key === 'Escape' || evt.key === 'Esc';
+      closeAllAccordion();
 
-      if (isEscKey) {
-        evt.target.closest('.accordion__item').classList.remove('accordion__item--open');
-        evt.target.removeEventListener('keydown', closeAccordionKeyPressHandler);
-      }
-    };
-
-    var toggleAccordionClickHandler = function (evt) {
-      evt.preventDefault();
-
-      closeAllAccordion(evt.target.closest('.accordion__item'));
-      evt.target.closest('.accordion__item').classList.toggle('accordion__item--open');
-      evt.target.addEventListener('keydown', closeAccordionKeyPressHandler);
-    };
-
-    accordionButtons.forEach(function (it) {
-      it.addEventListener('click', toggleAccordionClickHandler);
-    });
-
-    closeAllAccordion();
-
+    }
   }
 })();
 
 'use strict';
 
 (function () {
-  var phoneFields = document.querySelectorAll('input[type="tel"]');
-  var phoneFieldMask = {
-    mask: '+7(000)000-00-00'
-  };
+  if (document.querySelector('input[type="tel"]')) {
+    var phoneFields = document.querySelectorAll('input[type="tel"]');
+    var phoneFieldMask = {
+      mask: '+7(000)000-00-00'
+    };
 
-  phoneFields.forEach(function (field) {
-    var mask = new window.IMask(field, phoneFieldMask);
-    mask.value = field.value;
+    phoneFields.forEach(function (field) {
+      var mask = new window.IMask(field, phoneFieldMask);
+      mask.value = field.value;
 
-    field.addEventListener('focus', function () {
-      field.value = '+7(';
+      field.addEventListener('focus', function () {
+        field.value = '+7(';
+      });
     });
-  });
+  }
 })();
 
 'use strict';
 
 (function () {
-  var openModalButton = document.querySelector('.header__button');
+  if (document.querySelector('.header__button')) {
+    var openModalButton = document.querySelector('.header__button');
 
-  var closeModal = function (modal, buttonClose) {
-    modal.classList.remove('modal--open');
-    buttonClose.removeEventListener('click', closeModalClickHandler);
-    document.removeEventListener('keydown', closeModalKeyPressHandler);
-    document.removeEventListener('click', closeModalOutsideClickHandler);
-  };
+    var closeModal = function (modal, buttonClose) {
+      modal.classList.remove('modal--open');
+      buttonClose.removeEventListener('click', closeModalClickHandler);
+      document.removeEventListener('keydown', closeModalKeyPressHandler);
+      document.removeEventListener('click', closeModalOutsideClickHandler);
+    };
 
-  var closeModalKeyPressHandler = function (evt) {
-    var isEscKey = evt.key === 'Escape' || evt.key === 'Esc';
+    var closeModalKeyPressHandler = function (evt) {
+      var isEscKey = evt.key === 'Escape' || evt.key === 'Esc';
 
-    if (isEscKey) {
-      document.querySelector('.modal--open').classList.remove('modal--open');
-    }
-  };
+      if (isEscKey) {
+        document.querySelector('.modal--open').classList.remove('modal--open');
+      }
+    };
 
-  var closeModalOutsideClickHandler = function (evt) {
-    if (evt.target.classList.contains('modal')) {
-      document.querySelector('.modal--open').classList.remove('modal--open');
-    }
-  };
+    var closeModalOutsideClickHandler = function (evt) {
+      if (evt.target.classList.contains('modal')) {
+        document.querySelector('.modal--open').classList.remove('modal--open');
+      }
+    };
 
-  var closeModalClickHandler = function (evt) {
-    evt.preventDefault();
-    var modal = evt.target.closest('.modal--open');
-    var buttonClose = evt.target;
-    closeModal(modal, buttonClose);
-  };
+    var closeModalClickHandler = function (evt) {
+      evt.preventDefault();
+      var modal = evt.target.closest('.modal--open');
+      var buttonClose = evt.target;
+      closeModal(modal, buttonClose);
+    };
 
-  var openModalClickHandler = function (evt) {
-    evt.preventDefault();
+    var openModalClickHandler = function (evt) {
+      evt.preventDefault();
 
-    var modal = document.querySelector('.modal');
-    modal.classList.add('modal--open');
-    var modalCloseButton = modal.querySelector('.modal__close-modal-button');
-    modalCloseButton.focus();
-    modalCloseButton.addEventListener('click', closeModalClickHandler);
-    document.addEventListener('keydown', closeModalKeyPressHandler);
-    document.addEventListener('click', closeModalOutsideClickHandler);
-  };
+      var modal = document.querySelector('.modal');
+      modal.classList.add('modal--open');
+      var userNameField = modal.querySelector('input[name="name"]');
+      var modalCloseButton = modal.querySelector('.modal__close-modal-button');
 
-  openModalButton.addEventListener('click', openModalClickHandler);
+      userNameField.focus();
+      modalCloseButton.addEventListener('click', closeModalClickHandler);
+      document.addEventListener('keydown', closeModalKeyPressHandler);
+      document.addEventListener('click', closeModalOutsideClickHandler);
+    };
+
+    openModalButton.addEventListener('click', openModalClickHandler);
+  }
 })();
 
 'use strict';
@@ -135,21 +143,23 @@
 'use strict';
 
 (function () {
-  var callbackForms = document.querySelectorAll('.callback-form form');
+  if (document.querySelectorAll('.callback-form form')) {
+    var callbackForms = document.querySelectorAll('.callback-form form');
 
-  callbackForms.forEach(function (form) {
-    var userName = form.querySelector('input[name="name"]');
-    var userPhone = form.querySelector('input[type="tel"]');
-    var userQuestion = form.querySelector('textarea');
+    callbackForms.forEach(function (form) {
+      var userName = form.querySelector('input[name="name"]');
+      var userPhone = form.querySelector('input[type="tel"]');
+      var userQuestion = form.querySelector('textarea');
 
-    form.addEventListener('submit', function () {
-      localStorage.clear();
+      form.addEventListener('submit', function () {
+        localStorage.clear();
 
-      localStorage.setItem('name', userName.value);
-      localStorage.setItem('phone', userPhone.value);
-      localStorage.setItem('questions', userQuestion.value);
+        localStorage.setItem('name', userName.value);
+        localStorage.setItem('phone', userPhone.value);
+        localStorage.setItem('questions', userQuestion.value);
+      });
     });
-  });
+  }
 })();
 
 (function (global, factory) {
@@ -3816,7 +3826,7 @@
           @protected
         */
         value: function _saveSelection()
-	    /* ev */ {
+    /* ev */ {
           if (this.value !== this.el.value) {
             console.warn('Element value was changed outside of mask. Syncronize mask using `mask.updateValue()` to work properly.'); // eslint-disable-line no-console
           }
