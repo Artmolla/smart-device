@@ -3,8 +3,8 @@
   padding: 33px 0 90px;
   background-color: $space-blue;
   background-image:
-    url("../../img/backgrounds/bg-two-triangles.svg"),
-    url("../../img/backgrounds/bg-night-sky.png");
+    url("../img/backgrounds/bg-two-triangles.svg"),
+    url("../img/backgrounds/bg-night-sky.png");
   background-size: 671px 641px, cover;
   background-repeat: no-repeat, no-repeat;
   background-position: right calc(35% - 218px) top 118px, center;
@@ -15,8 +15,8 @@
 
   @media (min-resolution: 1.5dppx) {
     background-image:
-      url("../../img/backgrounds/bg-two-triangles.svg"),
-      url("../../img/backgrounds/bg-night-sky@2x.png");
+      url("../img/backgrounds/bg-two-triangles.svg"),
+      url("../img/backgrounds/bg-night-sky@2x.png");
   }
 
   @media (max-width: $tablet-width) {

@@ -38,7 +38,7 @@
       content: "";
       width: 16px;
       height: 16px;
-      background-image: url("../../img/icons/icon-plus.svg");
+      background-image: url("../img/icons/icon-plus.svg");
       background-repeat: no-repeat;
       background-position: center;
     }
@@ -48,7 +48,7 @@
 .accordion__item--open .accordion__button {
   &::after {
     @media (max-width: $mobile-width) {
-      background-image: url("../../img/icons/icon-minus.svg");
+      background-image: url("../img/icons/icon-minus.svg");
     }
   }
 }
