@@ -60,7 +60,12 @@
 
     @media (max-width: $tablet-width) {
       margin: 5px 0;
-      padding: 0 2px 0 0;
+    }
+  }
+
+  &:nth-child(3n+1) {
+    @media (max-width: $mobile-width) {
+      padding: 24px 21px 19px 26px;
     }
   }
 
@@ -75,11 +80,12 @@
   }
 
   @media (max-width: $tablet-width) {
-    padding: 24px 19px 16px 26px;
+    padding: 24px 19px 16px 28px;
     min-height: 232px;
+    box-shadow: inset 2px 0 0 $blue;
   }
 
   @media (max-width: $mobile-width) {
-    padding: 24px 11px 19px 26px;
+    padding: 24px 15px 19px 26px;
   }
 }
