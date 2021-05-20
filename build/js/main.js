@@ -61,6 +61,7 @@
 
       field.addEventListener('focus', function () {
         field.value = '+7(';
+        mask.updateValue();
       });
     });
   }
