@@ -266,3 +266,11 @@
     }
   }
 }
+
+.callback-form .callback-form__input-error {
+  outline: 1px solid $error;
+}
+
+.callback-form .callback-form__input-error--label {
+  color: $error;
+}
