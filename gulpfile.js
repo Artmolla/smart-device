@@ -86,7 +86,10 @@ gulp.task('html', function () {
 });
 
 gulp.task('scripts', function () {
-  return gulp.src('source/js/*.js', '!vendor.js')
+  return gulp.src([
+    'source/js/*.js',
+    '!source/js/vendor.js'
+  ])
     .pipe(concat('main.js'))
     .pipe(gulp.dest('build/js/'));
 });
