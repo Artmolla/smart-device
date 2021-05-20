@@ -29,7 +29,8 @@
   min-height: 299px;
   padding: 40px 42px 51px;
   border: 1px solid $light-grey-border;
-  border-left: 3px solid $blue;
+  border-left: 0;
+  box-shadow: inset 3px 0 0 $blue;
   background-color: $white;
 
   h3 {
@@ -66,7 +67,6 @@
   &:hover {
     cursor: pointer;
     color: $white;
-    border-left: 1px solid $light-grey-border;
     background-color: $blue;
   }
 
@@ -76,31 +76,10 @@
 
   @media (max-width: $tablet-width) {
     padding: 24px 19px 16px 26px;
-    border-left: 2px solid $blue;
     min-height: 232px;
   }
 
   @media (max-width: $mobile-width) {
     padding: 24px 11px 19px 26px;
-  }
-}
-
-.advantages__sentence-carryover {
-  display: none;
-}
-
-.advantages__sentence-carryover--tablet {
-  @media (max-width: $tablet-width) {
-    display: initial;
-  }
-
-  @media (max-width: $mobile-width) {
-    display: none;
-  }
-}
-
-.advantages__sentence-carryover--mobile {
-  @media (max-width: $mobile-width) {
-    display: initial;
   }
 }
