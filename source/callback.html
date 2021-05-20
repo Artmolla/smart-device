@@ -19,11 +19,8 @@
     <div class="container">
       <div class="modal__logo">
         <a href="index.html">
-          <svg class="header__logo" width="202" height="52">
+          <svg width="202" height="52">
             <use xlink:href="img/sprite.svg#logo"></use>
-          </svg>
-          <svg class="header__logo header__logo--mobile" width="38" height="38">
-            <use xlink:href="img/sprite.svg#logo-mobile"></use>
           </svg>
         </a>
       </div>
@@ -33,7 +30,7 @@
             <span class="visually-hidden">Закрыть модальное окно</span>
           </button>
           <div class="callback-form callback-form--modal">
-            <h2>Закажите звонок</h2>
+            <h1>Закажите звонок</h1>
             <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
             <form action="https://echo.htmlacademy.ru" method="POST">
               <div class="callback-form__input-container callback-form__input-container--modal">
@@ -44,10 +41,8 @@
                 <input id="modal-phone" type="tel" name="phone" placeholder="Телефон"
                   pattern="^(\+7)\([0-9]{3}\)[0-9]{3}[-][0-9]{2}[-][0-9]{2}$" required>
               </div>
-              <div class="callback-form__input-container callback-form__input-container--modal">
-                <label class="visually-hidden" for="modal-question">Ваш вопрос</label>
-                <textarea name="question" id="modal-question" cols="30">Ваш вопрос</textarea>
-              </div>
+              <label class="visually-hidden" for="modal-question">Ваш вопрос</label>
+              <textarea name="question" id="modal-question" cols="30" placeholder="Ваш вопрос"></textarea>
               <div
                 class="callback-form__input-container callback-form__input-container--agreement callback-form__input-container--modal">
                 <button class="callback-form__button" type="submit">Отправить</button>
