@@ -90,7 +90,12 @@
   right: calc(25% - 428px);
   z-index: 0;
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: 1350px) {
+    top: -75px;
+    right: -231px;
+  }
+
+  @media (max-width: 1210px) {
     width: 465px;
     top: -75px;
     right: -231px;
