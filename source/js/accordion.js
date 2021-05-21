@@ -38,6 +38,7 @@
 
       accordionButtons.forEach(function (it) {
         it.classList.remove('accordion__button--no-js');
+        it.tabIndex = '0';
         it.addEventListener('click', toggleAccordionClickHandler);
       });
 
