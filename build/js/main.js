@@ -37,6 +37,7 @@
       };
 
       accordionButtons.forEach(function (it) {
+        it.classList.remove('accordion__button--no-js');
         it.addEventListener('click', toggleAccordionClickHandler);
       });
 

@@ -52,3 +52,11 @@
     }
   }
 }
+
+.accordion__button--no-js {
+  &::after {
+    @media (max-width: $mobile-width) {
+      display: none;
+    }
+  }
+}
