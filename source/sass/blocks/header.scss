@@ -36,11 +36,12 @@
 }
 
 .header__actions {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: min-content auto min-content;
+  gap: 1.5em 2.4em;
+  align-items: start;
   font-family: $secondary-font;
-  align-items: flex-start;
-  margin-bottom: 230px;
+  margin-bottom: 229px;
 
   a {
     display: flex;
@@ -57,6 +58,9 @@
   }
 
   @media (max-width: $tablet-width) {
+    grid-template-columns: min-content max-content;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 116px;
   }
 
@@ -85,9 +89,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  align-self: center;
-  max-width: 75%;
-  margin: 0 5px 0 auto;
+  margin: 17px 0 0 auto;
 
   @media (max-width: $tablet-width) {
     margin: 0 0 0 auto;
@@ -95,7 +97,8 @@
 }
 
 .header__item {
-  margin-right: 84px;
+  width: 215px;
+  margin: 0 5px 0 0;
 
   span {
     @media (max-width: $tablet-width) {
@@ -113,19 +116,8 @@
   }
 
   @media (max-width: $tablet-width) {
-    margin-right: 30px;
-  }
-
-  @media (max-width: $mobile-width) {
-    margin-right: 20px;
-  }
-}
-
-.header__item--phone {
-  margin-right: 49px;
-
-  @media (max-width: $tablet-width) {
-    margin-right: 0;
+    width: min-content;
+    margin: 0 32px 0 0;
   }
 }
 
@@ -151,7 +143,17 @@
   }
 }
 
+.header__buttons-list {
+  @include list-reset;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
 .header__button {
+  padding: 5px;
+
   a {
     font-family: $main-font;
     font-weight: 700;
