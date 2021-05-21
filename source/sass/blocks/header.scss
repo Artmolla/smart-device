@@ -119,6 +119,10 @@
     width: min-content;
     margin: 0 32px 0 0;
   }
+
+  @media (max-width: $mobile-width) {
+    margin: 0 22px 0 0;
+  }
 }
 
 .header__icon {
