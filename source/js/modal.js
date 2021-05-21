@@ -50,22 +50,22 @@
       var lastFocusableEl = focusableEls[focusableEls.length - 1];
       var KEYCODE_TAB = 9;
 
-      element.addEventListener('keydown', function (e) {
-        var isTabPressed = (e.key === 'Tab' || e.keyCode === KEYCODE_TAB);
+      element.addEventListener('keydown', function (evt) {
+        var isTabPressed = (evt.key === 'Tab' || evt.keyCode === KEYCODE_TAB);
 
         if (!isTabPressed) {
           return;
         }
 
-        if (e.shiftKey) {
+        if (evt.shiftKey) {
           if (document.activeElement === firstFocusableEl) {
             lastFocusableEl.focus();
-            e.preventDefault();
+            evt.preventDefault();
           }
         } else {
           if (document.activeElement === lastFocusableEl) {
             firstFocusableEl.focus();
-            e.preventDefault();
+            evt.preventDefault();
           }
         }
       });
